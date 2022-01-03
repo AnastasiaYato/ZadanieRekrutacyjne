@@ -89,7 +89,6 @@ namespace Zadanie.ViewModels
                 {
                     _LoadCommand = new BaseCommand(LoadClick, () => IsEnabled);
                 }
-
                 return _LoadCommand;
             }
         }
@@ -97,11 +96,9 @@ namespace Zadanie.ViewModels
         #region Private Helpers
         private void LoginClick(object parameter)
         {
-
-                var passwordBox = (PasswordBox)parameter;
+            var passwordBox = (PasswordBox)parameter;
             if (!string.IsNullOrEmpty(_Login) && !string.IsNullOrEmpty(passwordBox.Password))
             {
-
                 try
                 {
                     string connetionString;
@@ -109,7 +106,7 @@ namespace Zadanie.ViewModels
                     cnn = new SqlConnection(connetionString);
                     cnn.Open();
 
-                    var popup = new Popup("UDANE LOGOWANIE", "POMYŚLNIE POŁĄCZONO Z BAZĄ DANYCH");
+                    _= new Popup("UDANE LOGOWANIE", "POMYŚLNIE POŁĄCZONO Z BAZĄ DANYCH");
                     IsEnabled = true;
 
                 }
