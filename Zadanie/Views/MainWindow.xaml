@@ -1,0 +1,28 @@
+﻿<Window x:Class="Zadanie.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zadanie.Views"
+        mc:Ignorable="d"
+        Title="Aplikacja" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DataGrid Name="GridField" Grid.Column="1" HorizontalAlignment="Center" Height="217" VerticalAlignment="Center" Width="400" FontWeight="Normal" MinHeight="100" ItemsSource="{Binding ItemsList}">
+       
+        </DataGrid>
+        <Button Content="Testuj Połączenie" HorizontalAlignment="Center" Margin="0,167,0,0" VerticalAlignment="Top" Width="121" Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=passwordBox}"/>
+        <TextBox HorizontalAlignment="Center" Margin="0,91,0,0" Text="{Binding Login}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center" Height="21"/>
+        <PasswordBox Name="passwordBox" HorizontalAlignment="Center" Height="20" Margin="0,138,0,0"  VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center"  />
+        <Label Content="Login" HorizontalAlignment="Center" Margin="0,65,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Hasło" HorizontalAlignment="Center" Height="26" Margin="0,112,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Name="LoadButton"  Content="Załaduj Dane" Grid.Column="1" HorizontalAlignment="Center" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Command="{Binding LoadCommand}"/>
+    </Grid>
+</Window>
