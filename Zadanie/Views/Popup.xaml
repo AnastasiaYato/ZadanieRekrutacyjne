@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zadanie.Views"
         mc:Ignorable="d"
-        Title="Popup" Width="242" Height="150"
+        Title="Popup" Width="250" Height="200"
         ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -15,8 +15,11 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Viewbox>
         <TextBox Name="PopupText" Grid.Row="0" FontSize="10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="5" IsReadOnly="True" BorderThickness="0" TextWrapping="Wrap"/>
-        <Button Grid.Row="1" Margin="20" FontSize="10" Content="OK" Click="OKButton_Click" />
+        </Viewbox>
+            <Button Grid.Row="1" Margin="30" FontSize="10" Content="OK" Click="OKButton_Click" />
+            
     </Grid>
 
 </Window>

@@ -9,8 +9,7 @@ namespace Zadanie.ViewModels
 {
     struct Package
     {
-        public string Lokalizacja { get; set; }
-        public int Wartość { get; set; }
+        public string Kolumna { get; set; }
     }
     class MainWindowViewModel : BaseViewModel
     {
@@ -112,7 +111,7 @@ namespace Zadanie.ViewModels
                 }
                 catch (SqlException e)
                 {
-                    _ = new Popup("BŁĄD SQL", "WYSTĄPIŁ BŁĄD : " + e.Number);
+                    _ = new Popup("BŁĄD SQL", "WYSTĄPIŁ BŁĄD : " + e.Message +"\n KOD BŁĘDU: "+e.Number);
 
                 }
 
@@ -140,8 +139,7 @@ namespace Zadanie.ViewModels
             {
                 Package p = new Package
                 {
-                    Lokalizacja = sdr.GetString(0),
-                    Wartość = int.Parse(sdr.GetString(1))
+                    Kolumna = sdr.GetString(0)
                 };
                 ItemsList.Add(p);
             }

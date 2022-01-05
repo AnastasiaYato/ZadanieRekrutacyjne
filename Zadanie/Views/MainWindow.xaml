@@ -15,8 +15,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <DataGrid Name="GridField" Grid.Column="1" HorizontalAlignment="Center" Height="217" VerticalAlignment="Center" Width="400" FontWeight="Normal" MinHeight="100" ItemsSource="{Binding ItemsList}">
-       
+        <DataGrid Name="GridField" Grid.Column="1" HorizontalAlignment="Center" Height="217" VerticalAlignment="Center" Width="400" FontWeight="Normal" MinHeight="100" ItemsSource="{Binding ItemsList}" ColumnWidth="*">
         </DataGrid>
         <Button Content="Testuj Połączenie" HorizontalAlignment="Center" Margin="0,167,0,0" VerticalAlignment="Top" Width="121" Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName=passwordBox}"/>
         <TextBox HorizontalAlignment="Center" Margin="0,91,0,0" Text="{Binding Login}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center" Height="21"/>
