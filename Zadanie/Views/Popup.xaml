@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Zadanie.Views"
         mc:Ignorable="d"
         Title="Popup" Width="250" Height="200"
-        ResizeMode="NoResize">
+        ResizeMode="CanResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
